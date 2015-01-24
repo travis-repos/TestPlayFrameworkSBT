@@ -1,7 +1,9 @@
 language: scala
 scala:
    - 2.11.5
-script: sbt test
+
+before_script: unset SBT_OPTS JVM_OPTS
+script: ./activator test
 notifications:
   email:
     on_success: never
